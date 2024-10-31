@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Top_Level_Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>DS18B20_Sensor</Name>
+  <Identifier>2d124e69-2bdb-4f22-9b10-3615ac8dcafe</Identifier>
+  <Description>Gathers software elements allowing to measure the air temperature using a DS18B20 device.</Description>
+  <Packages />
+  <Types />
+  <Interfaces />
+  <Component_Types>
+    <Component_Type>
+      <Name>DS18B20_Sensor</Name>
+      <Identifier>cf10522f-b0a3-4381-af59-2d8cfbb6114a</Identifier>
+      <Description>Allows to get a temperature measured with a DS18B20 device configured for 12-bit resolution.
+
+The address of the DS18B20 shall be known and set at the Component_Prototype creation.</Description>
+      <Configurations>
+        <Configuration_Parameter>
+          <Name>Device_Address</Name>
+          <Identifier>427b3fa6-85e1-4911-bc61-c07cf3f5d7c6</Identifier>
+          <Description>64-bit serial code of the DS18B20 device.</Description>
+          <Referenced_Type_Id>7bbb6c3b-4c87-4703-a133-f6b287139fbc</Referenced_Type_Id>
+        </Configuration_Parameter>
+      </Configurations>
+      <Operations>
+        <OS_Operation>
+          <Name>Measure_Temperature</Name>
+          <Identifier>f93165e0-5d9d-4920-8b41-7ed2393d925a</Identifier>
+          <Description>Allows to request temperature measurement to the device and to read the measured temperature.</Description>
+        </OS_Operation>
+      </Operations>
+      <Provider_Ports>
+        <Provider_Port>
+          <Name>Measure</Name>
+          <Identifier>daa033bf-cbe3-4d80-9d14-1c2b61b4022b</Identifier>
+          <Description />
+          <Referenced_Interface_Id>377445e2-f5f9-4280-a6b5-dcb517067e82</Referenced_Interface_Id>
+        </Provider_Port>
+      </Provider_Ports>
+      <Requirer_Ports>
+        <Requirer_Port>
+          <Name>One_Wire</Name>
+          <Identifier>d977cc19-91b8-40eb-a5c0-1e7a905ac145</Identifier>
+          <Description />
+          <Referenced_Interface_Id>f99c8ff7-b5bd-4984-b1a4-ae183a460401</Referenced_Interface_Id>
+        </Requirer_Port>
+      </Requirer_Ports>
+    </Component_Type>
+  </Component_Types>
+  <Compositions />
+</Top_Level_Package>
